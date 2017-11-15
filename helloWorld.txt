@@ -1,1 +1,10 @@
 hello World
+
+encrypt
+openssl aes-256-cbc -a -salt -in secrets.txt -out secrets.txt.enc
+openssl enc -in test.html -out test.html.enc -e -aes256 -k 68acsymmKey
+
+dcrypt
+openssl aes-256-cbc -d -a -in secrets.txt.enc -out secrets.txt.new
+openssl enc -in encrypted.dat -out outfile.txt -d -aes256 -k symmetrickey
+openssl enc -out test.html -in test.html.enc -d -aes256 -k 68acsymmKey
